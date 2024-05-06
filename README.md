@@ -2,11 +2,15 @@
 
 This repo is mainly to explore the relationship between vram usage, quantization, model parameters and token generation speed. 
 
+### Prerequisites
+This repo uses huggingface transformers as well as bitsandbytes and accelerate for quantization, some models may require extra packages that may need to be installed when prompted
+```pip install -r requirements.txt```
+
 ### Running the test
 `test_model.py`
 to run
 ```
-python test_model.py --model=<model card from HF> --quantization=<4 or 8 else 16> --token=HF_TOKEN
+python test_model.py --model=<model card from HF> --quantization=<4 or 8 else 16> --token=<HF_TOKEN>
 ```
 after the model runs, it runs a loop that allows users to write in custom prompts
 
